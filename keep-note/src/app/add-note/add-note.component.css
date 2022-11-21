@@ -1,16 +1,7 @@
-#addnote{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    color: blue;
+.example-card {
+    max-width: 350px;
+    margin-bottom: 8px;
 }
-.container{
-    border: 2px solid black;
-    width: 600px;
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
 }
-.main-form {
-    width: 50%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }

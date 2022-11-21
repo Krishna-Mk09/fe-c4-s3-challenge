@@ -1,0 +1,19 @@
+#addNoteButton{
+    margin-top: 10px;
+    margin-left: 1200px;
+    margin-bottom: 3em;
+}
+#addNoteTemplate{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+app-note-list{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+app-registration{
+    position: relative;
+    top: 20px;
+    left: 80px;
+}

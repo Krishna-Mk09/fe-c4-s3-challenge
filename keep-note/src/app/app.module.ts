@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './search/search.component';
+import { NoteListComponent } from './note-list/note-list.component';
+import { NoteCardComponent } from './note-card/note-card.component';
 import { AddNoteComponent } from './add-note/add-note.component';
-import { NoteComponent } from './note/note.component';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -25,17 +27,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatChipsModule} from '@angular/material/chips';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    SearchComponent,
+    NoteListComponent,
+    NoteCardComponent,
     AddNoteComponent,
-    NoteComponent
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatRadioModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatChipsModule,
     ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

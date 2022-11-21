@@ -1,0 +1,26 @@
+strong{
+    color:dodgerblue
+}
+#genderSpan, mat-radio-button{
+    margin-right: 1em;
+}
+.formField{
+    margin-bottom: 1em;
+}
+.formDiv{
+    width: 35em;
+}
+#firstName, #password, #age, #city{
+    margin-right: 3em;
+}
+#emailId, #street, #zipCode{
+    width: 90%;
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+}
+#resetButton{
+    position: relative;
+    left: -30px;
+}

@@ -1,3 +1,25 @@
 <app-header></app-header>
 
-<app-add-note></app-add-note>
+<div class="dashboard">
+
+  <app-registration></app-registration>
+
+  <br><br><br>
+  
+  <div id="addNoteTemplate">
+    <ng-template [ngIf]="flag">
+      <app-add-note></app-add-note>
+    </ng-template>
+  </div>
+
+  <app-search (emmiter)="appCompDataTransfer($event)"></app-search><br>
+
+  <app-note-list [Notes] = "Notes"></app-note-list>
+
+  <div id="addNoteButton">
+    <button mat-icon-button mat-raised-button color="primary">
+      <mat-icon class="text-white" fontIcon="add-circle" color="white" (click)="open()"></mat-icon>
+    </button>
+  </div>  
+
+</div>

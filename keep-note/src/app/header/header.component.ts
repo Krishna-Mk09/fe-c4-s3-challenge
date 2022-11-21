@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Note } from '../model/note';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
 
+  
+  constructor() { }
   ngOnInit(): void {
   }
 

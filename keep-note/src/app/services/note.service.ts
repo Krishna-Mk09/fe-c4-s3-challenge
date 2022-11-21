@@ -1,23 +1,23 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Note } from 'models/note';
-import { HttpClient } from '@angular/common/http';
-
-
+import { Note } from '../model/note';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoteService {
-  
-  URL: string = "http://localhost:3000/notes";
-  constructor(private http: HttpClient) { }
 
-  getNotes(): Observable<Array<Note>> {
-    return this.http.get<Array<Note>>(this.URL);
+  constructor(private httpClientObj:HttpClient) { }
+
+  URL:string="http://localhost:3000/notes";
+
+  getNotes():Observable<Array<Note>>{
+    return this.httpClientObj.get<Array<Note>>(this.URL)
   }
 
-  addNote(note: any) {
-    return this.http.post<any>(this.URL, note);
+  addNote(data:Note){
+    return this.httpClientObj.post(this.URL,data)
   }
+
 }
